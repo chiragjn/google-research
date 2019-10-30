@@ -31,6 +31,7 @@ import re
 import numpy as np
 import six
 from six.moves import range
+from six.moves import zip
 import tensorflow as tf
 
 
@@ -359,7 +360,7 @@ def get_assignment_map_from_checkpoint(tvars, init_checkpoint, num_of_group=0):
       name = m.group(1)
     name_to_variable[name] = var
   init_vars = tf.train.list_variables(init_checkpoint)
-  init_vars_name = [name for (name, _) in init_vars]
+  init_vars_name = list(zip(*init_vars))[0]
 
   if num_of_group > 0:
     assignment_map = []
