@@ -47,14 +47,13 @@ flags.DEFINE_string(
     "The output directory where the model checkpoints will be written.")
 
 flags.DEFINE_string(
-    "export_dir", None,
-    "The output directory where the saved models will be written.")
-
-flags.DEFINE_string(
     "albert_hub_module_handle", None,
     "Handle for the ALBERT TF-Hub module.")
 
 ## Other parameters
+flags.DEFINE_string(
+    "export_dir", None,
+    "The output directory where the saved models will be written.")
 
 flags.DEFINE_integer(
     "max_seq_length", 128,

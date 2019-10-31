@@ -1,6 +1,20 @@
 ALBERT
 ======
 
+Convert TF-HUB module to checkpoint
+1. Download the .tar.gz for the module
+2. Untar it (say to albert/hub_modules/albert_base)
+3. Run 
+
+```
+python -m albert.create_pretraining_data --input_file='albert/sample_text.txt' --output_file='albert/sample_text.tfdata' --vocab_file='albert/hub_modules/albert_base/assets/30k-clean.model' --spm_model_file='albert/hub_modules/albert_base/assets/30k-clean.model'
+```
+
+4. 
+
+
+======
+
 ALBERT is "A Lite" version of BERT, a popular unsupervised language
 representation learning algorithm. ALBERT uses parameter-reduction techniques
 that allow for large-scale configurations, overcome previous memory limitations,
